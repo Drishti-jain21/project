@@ -1,129 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-#hp {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    color: rgb(100, 12, 233);
-    float: right;
-    object-fit: center;
-
-    margin: 0px;
-    background: url(frame.jpg) no-repeat  ;
-    
-   
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    overflow: hidden;
 }
-.sign-in-button button {
+
+section{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+}
+
+section .imgSide{
+    position: relative;
+    width:50%;
+    height:100%;
+    
+}
+
+section .imgSide img{
     position:absolute;
-    top: -10px;
-    left: 100px;
-    margin:70px;
-    width:10%;
-    background-color: #FFFFFF; 
-    border: 1px solid #FF1684; 
-    color: #FF1684; 
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    
+    top:0;
+    left:0;
+    width:60%;
+    height:100%;
+    object-fit:cover;
+}
 
-}
-.sign-up-button button {
-    position: absolute;
-    top: -10px;
-    left: 300px;
-    width:10%;
-    margin:70px;
-    
-    background-color: #FF1684; 
-    border: 1px solid #FF1684; 
-    color: #FFFFFF; 
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    transition-duration: 0.4s;
-    
-}  
-  /* Add a background color on hover */
-.sign-up-button button:hover 
-{
-    
-    background-color: #FF1684;
-    color:#FFFFFF;
-}
-.signupFrm {
-    padding-top:80px;
-    left:400px;
-    top:-450px;
-    position: center;
+section .content{
+    display:flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-.form {
-    background-color: white;
-    width: 50%;
-    border-radius: 8px;
-    padding: 20px 120px;
-    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
-}
-.submitBtn {
-    display: block;
-    margin: 0px 9px;
-    padding: 4px 14px;
-    border: 2px solid rgb(102, 9, 207);
-    background-color:rgb(109, 12, 201);
-    color: white;
-    border-radius: 4px; 
-    cursor: pointer;
-    font-size: 16px;
-    font-family: 'Popins', Courier;
-    width: 100%
+    width:60%;
+    height:100%;
+    margin-right: 10%;
 }
 
-.submitBtn:hover {
-    background-color: rgb(250, 245, 245);
-    color: rgb(8, 8, 8);
+section .content .right{
+    padding:40px;
+    width:100%;
+    background: rgb(255, 255, 255);
+    margin: 50px;
 }
-.inputContainer {
-    position: relative;
-    height: 35px;
-    width: 90%;
-    margin-bottom: 17px;
-}
-.input {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
+
+section .content .right .buttons{
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px;
     width: 100%;
-    border: 1px solid #DADCE0;
-    border-radius: 7px;
-    font-size: 16px;
-    padding: 0 20px;
-    outline: none;
-    background: none;
-    z-index: 1;
+    height: 100%;
 }
 
-/* Hide the placeholder texts (a) */
-
-::placeholder {
-    color: transparent;
-}
-.label {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    padding: 0 4px;
-    background-color: white;
-    color: #DADCE0;
-    font-size: 16px;
-    transition: 0.5s;
-    z-index: 0;
-}
-.sign-in-text{
-    width: 50%;
-    height: 27px;
+section .content .right .buttons .sign-in{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    margin-right:90px;
+    margin-left:15px;
+    width: 80%;
+    height: 100%;
     
+    background: #FF1684;
+    border-radius: 5px;    
+}
+
+section .content .right .buttons .sign-up{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    margin-right:90px;
+    margin-left:30px;
+    width: 80%;
+    height: 100%;
+    
+    border: 2px solid #FF1684;
+    border-radius: 5px;
+}
+
+section .content .right .buttons a{
+    text-decoration: none;
+}
+
+section .content .right .buttons .sign-up:hover{
+    background: #FF1684;
+}
+
+section .content .right h2{
+    color:#2D0660;
+    font-weight: 600;
+    font-size:1.5em;
+    margin-bottom:20px;
+}
+
+section .content .right .input-field{
+    margin-bottom:20px;
+}
+
+section .content .right .input-field span{
+    width: 50px;
+    height: 27px;
+    margin-bottom:5px;
+    /* display:inline-block; */
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 18px;
-    line-height: 27px;
+    line-height: 33px;
+    color: #4C0AA3;
+
+}
+
+section .content .right .input-field input{
+    width: 100%;
+    padding: 10px 20px;
+    outline:none;
+    font-weight:400;
+    border: 1px solid #f0efef76;
+    font-size:16px;
+    color:#00000076;
+    background: #f0efef76;
+    border-radius:2px;
+}
+
+section .content .right .input-field .fontAwesome {
+    font-family: Helvetica, 'FontAwesome', sans-serif;
+  }
+
+section .content .right .btn button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    
+    width: 100%;
+    height: 20%;
+    
+    background: linear-gradient(97.13deg, #8835F6 7.81%, #4C0AA3 100%);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+section .content .right .btn button:hover{
+    background: #FF1684;
+}
+
+@media (max-width: 768px){
+    section .imgSide{
+        position:absolute;
+        top:0;
+        left:0;
+        width:150%;
+        height:100%;
+    }
+
+    section .content{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        height: 100%;
+        z-index:1;
+    }
+
+    section .content .right{
+        width:100%;
+        padding:40px;
+        background: rgb(255, 255, 255);
+        margin: 10px;
+    }
+
+    section .content .right .buttons .sign-in{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 24px;
+        margin-right:15px;
+        margin-left:0px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #FF1684;
+        border-radius: 5px;
+    }
+    section .content .right .buttons .sign-up{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 24px;
+        margin-right:15px;
+        margin-left:2px;
+        width: 100%;
+        height: 100%;
+        
+        border: 2px solid #FF1684;
+        border-radius: 5px;
+    }
+
 }
